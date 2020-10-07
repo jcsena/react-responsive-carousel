@@ -122,7 +122,8 @@
         "@types/react-dom": "^16.9.6",
         "@types/react-test-renderer": "^16.9.2",
         "mkdirp": "^1.0.4",
-        "node-sass": "^4.13.1"
+        "node-sass": "^4.13.1",
+        "typescript": "^3.8.3"
     },
     "postinstall": "yarn build",
     "jest": {
