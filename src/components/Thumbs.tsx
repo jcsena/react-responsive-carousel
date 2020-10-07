@@ -21,6 +21,7 @@ export interface Props {
     selectedItem: number;
     thumbWidth: number;
     transitionTime: number;
+    swipeableThumbs: boolean;
 }
 
 interface State {
@@ -50,6 +51,7 @@ export default class Thumbs extends Component<Props, State> {
         selectedItem: 0,
         thumbWidth: 80,
         transitionTime: 350,
+        swipeableThumbs = false,
     };
 
     constructor(props: Props) {
@@ -169,7 +171,7 @@ export default class Thumbs extends Component<Props, State> {
 
     onSwipeMove = (delta: { x: number; y: number }) => {
         let deltaX = delta.x;
-        if (!this.state.itemSize || !this.itemsWrapperRef) {
+        if (!this.state.itemSize || !this.itemsWrapperRef || !this.props.swipeableThumbs) {
             return false;
         }
         const leftBoundary = 0;
