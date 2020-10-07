@@ -51,7 +51,7 @@ export default class Thumbs extends Component<Props, State> {
         selectedItem: 0,
         thumbWidth: 80,
         transitionTime: 350,
-        swipeableThumbs = false,
+        swipeableThumbs: false,
     };
 
     constructor(props: Props) {
